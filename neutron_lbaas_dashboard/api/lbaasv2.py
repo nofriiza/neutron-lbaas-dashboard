@@ -332,6 +332,7 @@ def create_loadbalancer_full(request, **kwargs):
 
 
 def list_loadbalancers(request, **kwargs):
+    print(request)
     vips = neutronclient(request).list_loadbalancers(**kwargs)
     vips = [] if not vips else vips
     vips = vips.get('loadbalancers')

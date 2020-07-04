@@ -406,7 +406,7 @@ class LoadBalancers(generic.View):
     """API for load balancers.
 
     """
-    url_regex = r'lbaas/loadbalancers/$'
+    url_regex = r'neo/loadbalancers/$'
 
     @rest_utils.ajax()
     def get(self, request):
@@ -436,7 +436,7 @@ class LoadBalancerStatusTree(generic.View):
     """API for retrieving the resource status tree for a single load balancer.
 
     """
-    url_regex = r'lbaas/loadbalancers/(?P<loadbalancer_id>[^/]+)/statuses/$'
+    url_regex = r'neo/loadbalancers/(?P<loadbalancer_id>[^/]+)/statuses/$'
 
     @rest_utils.ajax()
     def get(self, request, loadbalancer_id):
@@ -453,7 +453,7 @@ class LoadBalancer(generic.View):
     """API for retrieving, updating, and deleting a single load balancer.
 
     """
-    url_regex = r'lbaas/loadbalancers/(?P<loadbalancer_id>[^/]+)/$'
+    url_regex = r'neo/loadbalancers/(?P<loadbalancer_id>[^/]+)/$'
 
     @rest_utils.ajax()
     def get(self, request, loadbalancer_id):
@@ -489,7 +489,7 @@ class Listeners(generic.View):
     """API for load balancer listeners.
 
     """
-    url_regex = r'lbaas/listeners/$'
+    url_regex = r'neo/listeners/$'
 
     @rest_utils.ajax()
     def get(self, request):
@@ -531,7 +531,7 @@ class Listener(generic.View):
     """API for retrieving, updating, and deleting a single listener.
 
     """
-    url_regex = r'lbaas/listeners/(?P<listener_id>[^/]+)/$'
+    url_regex = r'neo/listeners/(?P<listener_id>[^/]+)/$'
 
     @rest_utils.ajax()
     def get(self, request, listener_id):
@@ -594,7 +594,7 @@ class Pools(generic.View):
     """API for load balancer pools.
 
     """
-    url_regex = r'lbaas/pools/$'
+    url_regex = r'neo/pools/$'
 
     @rest_utils.ajax()
     def post(self, request):
@@ -613,7 +613,7 @@ class Pool(generic.View):
     """API for retrieving a single pool.
 
     """
-    url_regex = r'lbaas/pools/(?P<pool_id>[^/]+)/$'
+    url_regex = r'neo/pools/(?P<pool_id>[^/]+)/$'
 
     @rest_utils.ajax()
     def get(self, request, pool_id):
@@ -669,7 +669,7 @@ class Members(generic.View):
     """API for load balancer members.
 
     """
-    url_regex = r'lbaas/pools/(?P<pool_id>[^/]+)/members/$'
+    url_regex = r'neo/pools/(?P<pool_id>[^/]+)/members/$'
 
     @rest_utils.ajax()
     def get(self, request, pool_id):
@@ -708,7 +708,7 @@ class Member(generic.View):
     """API for retrieving a single member.
 
     """
-    url_regex = r'lbaas/pools/(?P<pool_id>[^/]+)' + \
+    url_regex = r'neo/pools/(?P<pool_id>[^/]+)' + \
                 '/members/(?P<member_id>[^/]+)/$'
 
     @rest_utils.ajax()
@@ -737,7 +737,7 @@ class HealthMonitors(generic.View):
     """API for load balancer pool health monitors.
 
     """
-    url_regex = r'lbaas/healthmonitors/$'
+    url_regex = r'neo/healthmonitors/$'
 
     @rest_utils.ajax()
     def post(self, request):
@@ -754,7 +754,7 @@ class HealthMonitor(generic.View):
     """API for retrieving a single health monitor.
 
     """
-    url_regex = r'lbaas/healthmonitors/(?P<healthmonitor_id>[^/]+)/$'
+    url_regex = r'neo/healthmonitors/(?P<healthmonitor_id>[^/]+)/$'
 
     @rest_utils.ajax()
     def get(self, request, healthmonitor_id):

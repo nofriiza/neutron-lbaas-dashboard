@@ -39,7 +39,7 @@
       {
         func: 'getLoadBalancers',
         method: 'get',
-        path: '/api/lbaas/loadbalancers/',
+        path: '/api/neo/loadbalancers/',
         error: 'Unable to retrieve load balancers.',
         testInput: [ true ],
         data: { params: { full: true } }
@@ -47,7 +47,7 @@
       {
         func: 'getLoadBalancer',
         method: 'get',
-        path: '/api/lbaas/loadbalancers/1234/',
+        path: '/api/neo/loadbalancers/1234/',
         error: 'Unable to retrieve load balancer.',
         testInput: [ '1234', true ],
         data: { params: { full: true } }
@@ -55,21 +55,21 @@
       {
         func: 'deleteLoadBalancer',
         method: 'delete',
-        path: '/api/lbaas/loadbalancers/1234/',
+        path: '/api/neo/loadbalancers/1234/',
         error: 'Unable to delete load balancer.',
         testInput: [ '1234' ]
       },
       {
         func: 'getLoadBalancerStatusTree',
         method: 'get',
-        path: '/api/lbaas/loadbalancers/1234/statuses/',
+        path: '/api/neo/loadbalancers/1234/statuses/',
         error: 'Unable to retrieve load balancer status tree.',
         testInput: [ '1234' ]
       },
       {
         func: 'getListeners',
         method: 'get',
-        path: '/api/lbaas/listeners/',
+        path: '/api/neo/listeners/',
         error: 'Unable to retrieve listeners.',
         testInput: [ '1234' ],
         data: { params: { loadbalancerId: '1234' } }
@@ -77,14 +77,14 @@
       {
         func: 'getListeners',
         method: 'get',
-        path: '/api/lbaas/listeners/',
+        path: '/api/neo/listeners/',
         data: {},
         error: 'Unable to retrieve listeners.'
       },
       {
         func: 'getListener',
         method: 'get',
-        path: '/api/lbaas/listeners/1234/',
+        path: '/api/neo/listeners/1234/',
         data: { params: { includeChildResources: true } },
         error: 'Unable to retrieve listener.',
         testInput: [ '1234', true ]
@@ -92,7 +92,7 @@
       {
         func: 'getListener',
         method: 'get',
-        path: '/api/lbaas/listeners/1234/',
+        path: '/api/neo/listeners/1234/',
         data: {},
         error: 'Unable to retrieve listener.',
         testInput: [ '1234', false ]
@@ -100,7 +100,7 @@
       {
         func: 'getPool',
         method: 'get',
-        path: '/api/lbaas/pools/1234/',
+        path: '/api/neo/pools/1234/',
         data: { params: { includeChildResources: true } },
         error: 'Unable to retrieve pool.',
         testInput: [ '1234', true ]
@@ -108,7 +108,7 @@
       {
         func: 'getPool',
         method: 'get',
-        path: '/api/lbaas/pools/1234/',
+        path: '/api/neo/pools/1234/',
         data: {},
         error: 'Unable to retrieve pool.',
         testInput: [ '1234', false ]
@@ -116,28 +116,28 @@
       {
         func: 'deletePool',
         method: 'delete',
-        path: '/api/lbaas/pools/1234/',
+        path: '/api/neo/pools/1234/',
         error: 'Unable to delete pool.',
         testInput: [ '1234' ]
       },
       {
         func: 'getMembers',
         method: 'get',
-        path: '/api/lbaas/pools/1234/members/',
+        path: '/api/neo/pools/1234/members/',
         error: 'Unable to retrieve members.',
         testInput: [ '1234' ]
       },
       {
         func: 'getMember',
         method: 'get',
-        path: '/api/lbaas/pools/1234/members/5678/',
+        path: '/api/neo/pools/1234/members/5678/',
         error: 'Unable to retrieve member.',
         testInput: [ '1234', '5678' ]
       },
       {
         func: 'editMember',
         method: 'put',
-        path: '/api/lbaas/pools/1234/members/5678/',
+        path: '/api/neo/pools/1234/members/5678/',
         error: 'Unable to update member.',
         data: { weight: 2 },
         testInput: [ '1234', '5678', { weight: 2 } ]
@@ -145,14 +145,14 @@
       {
         func: 'getHealthMonitor',
         method: 'get',
-        path: '/api/lbaas/healthmonitors/1234/',
+        path: '/api/neo/healthmonitors/1234/',
         error: 'Unable to retrieve health monitor.',
         testInput: [ '1234' ]
       },
       {
         func: 'editHealthMonitor',
         method: 'put',
-        path: '/api/lbaas/healthmonitors/1234/',
+        path: '/api/neo/healthmonitors/1234/',
         error: 'Unable to update health monitor.',
         data: { name: 'healthmonitor-1' },
         testInput: [ '1234', { name: 'healthmonitor-1' } ]
@@ -160,14 +160,14 @@
       {
         func: 'deleteHealthMonitor',
         method: 'delete',
-        path: '/api/lbaas/healthmonitors/1234/',
+        path: '/api/neo/healthmonitors/1234/',
         error: 'Unable to delete health monitor.',
         testInput: [ '1234' ]
       },
       {
         func: 'createLoadBalancer',
         method: 'post',
-        path: '/api/lbaas/loadbalancers/',
+        path: '/api/neo/loadbalancers/',
         error: 'Unable to create load balancer.',
         data: { name: 'loadbalancer-1' },
         testInput: [ { name: 'loadbalancer-1' } ]
@@ -175,7 +175,7 @@
       {
         func: 'editLoadBalancer',
         method: 'put',
-        path: '/api/lbaas/loadbalancers/1234/',
+        path: '/api/neo/loadbalancers/1234/',
         error: 'Unable to update load balancer.',
         data: { name: 'loadbalancer-1' },
         testInput: [ '1234', { name: 'loadbalancer-1' } ]
@@ -183,7 +183,7 @@
       {
         func: 'createListener',
         method: 'post',
-        path: '/api/lbaas/listeners/',
+        path: '/api/neo/listeners/',
         error: 'Unable to create listener.',
         data: { name: 'listener-1' },
         testInput: [ { name: 'listener-1' } ]
@@ -191,7 +191,7 @@
       {
         func: 'editListener',
         method: 'put',
-        path: '/api/lbaas/listeners/1234/',
+        path: '/api/neo/listeners/1234/',
         error: 'Unable to update listener.',
         data: { name: 'listener-1' },
         testInput: [ '1234', { name: 'listener-1' } ]
@@ -199,14 +199,14 @@
       {
         func: 'deleteListener',
         method: 'delete',
-        path: '/api/lbaas/listeners/1234/',
+        path: '/api/neo/listeners/1234/',
         error: 'Unable to delete listener.',
         testInput: [ '1234' ]
       },
       {
         func: 'createPool',
         method: 'post',
-        path: '/api/lbaas/pools/',
+        path: '/api/neo/pools/',
         error: 'Unable to create pool.',
         data: { name: 'pool-1' },
         testInput: [ { name: 'pool-1' } ]
@@ -214,7 +214,7 @@
       {
         func: 'editPool',
         method: 'put',
-        path: '/api/lbaas/pools/1234/',
+        path: '/api/neo/pools/1234/',
         error: 'Unable to update pool.',
         data: { name: 'pool-1' },
         testInput: [ '1234', { name: 'pool-1' } ]
@@ -222,7 +222,7 @@
       {
         func: 'createHealthMonitor',
         method: 'post',
-        path: '/api/lbaas/healthmonitors/',
+        path: '/api/neo/healthmonitors/',
         error: 'Unable to create health monitor.',
         data: { name: 'healthmonitor-1' },
         testInput: [ { name: 'healthmonitor-1' } ]
@@ -230,7 +230,7 @@
       {
         func: 'updateMemberList',
         method: 'put',
-        path: '/api/lbaas/pools/1234/members/',
+        path: '/api/neo/pools/1234/members/',
         error: 'Unable to update member list.',
         data: { name: 'member-1' },
         testInput: [ '1234', { name: 'member-1' } ]

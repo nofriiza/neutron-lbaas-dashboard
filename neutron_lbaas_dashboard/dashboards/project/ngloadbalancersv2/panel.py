@@ -24,7 +24,7 @@ LOG = logging.getLogger(__name__)
 
 
 class NGLoadBalancers(horizon.Panel):
-    name = _("Load Balancers")
+    name = _("Neo Lbaas")
     slug = 'ngloadbalancersv2'
     permissions = ('openstack.services.network',)
 
